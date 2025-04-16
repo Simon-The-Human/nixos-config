@@ -1,4 +1,16 @@
-{ pkgs, ... }: {
+{ config, pkgs, ... }:
+
+let
+  nixos-unstable = import
+    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/nixos-unstable)
+    # reuse the current configuration
+    { config = config.nixpkgs.config; };
+  unstable = import
+    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/master)
+    # reuse the current configuration
+    { config = config.nixpkgs.config; };
+in
+{
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
@@ -6,8 +18,10 @@
 
     # Desktop apps
     anki
-    code-cursor
+    # code-cursor
+    emacs
     imv
+    mattermost-desktop
     mpv
     obs-studio
     obsidian
@@ -15,6 +29,7 @@
     teams-for-linux
     telegram-desktop
     vesktop
+    vivaldi
 
     # CLI utils
     bc
