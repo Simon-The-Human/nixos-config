@@ -1,18 +1,30 @@
 {
   imports = [
+    ./amnezia.nix
     ./audio.nix
     ./bluetooth.nix
     ./boot.nix
+    ./direnv.nix
     ./env.nix
+    ./gamemode.nix
     ./home-manager.nix
     ./hyprland.nix
+    ./java.nix
     ./kernel.nix
     ./mime.nix
     ./net.nix
     ./nh.nix
     ./nix.nix
+    ./nix-ld.nix
+    ./nm.nix
+    ./openssh.nix
+    ./openvpn.nix
+    ./sound.nix
     ./timezone.nix
+    ./trim.nix
     ./user.nix
+    ./virtmanager.nix
+    ./zapret.nix
     ./zram.nix
   ];
 }
