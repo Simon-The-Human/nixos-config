@@ -1,8 +1,4 @@
-{ config, pkgs, nixpkgs-unstable, nixpkgs-experimental, ... }:
-let
-  unstable = import nixpkgs-unstable { inherit (config.nixpkgs) config; };
-  experimental = import nixpkgs-experimental { inherit (config.nixpkgs) config; };
-in
+{ config, pkgs, ... }:
 {
   nixpkgs.config.allowUnfree = true;
 
