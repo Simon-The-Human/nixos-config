@@ -49,6 +49,7 @@
       configs // {
         "${host.hostname}" = makeSystem {
           inherit (host) hostname stateVersion;
+          inherit nixpkgs-unstable nixpkgs-experimental;
         };
       }) {} hosts;
 
@@ -56,6 +57,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
       extraSpecialArgs = {
         inherit inputs homeStateVersion user;
+        inherit nixpkgs-unstable nixpkgs-experimental;
       };
 
       modules = [
