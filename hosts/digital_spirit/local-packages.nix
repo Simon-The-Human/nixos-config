@@ -1,13 +1,7 @@
-{ config, pkgs, ... }:
+{ config, pkgs, nixpkgs-unstable, nixpkgs-experimental, ... }:
 let
-  nixos-unstable = import
-    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/d89fc19e)
-    # reuse the current configuration
-    { config = config.nixpkgs.config; };
-  unstable = import
-    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/a39ed32a)
-    # reuse the current configuration
-    { config = config.nixpkgs.config; };
+  unstable-pkgs = import nixpkgs-unstable { inherit (config.nixpkgs) config; };
+  experimental-pkgs = import nixpkgs-experimental { inherit (config.nixpkgs) config; };
 in
 {
   nixpkgs.config = {
@@ -25,7 +19,7 @@ in
     xwayland
     wl-clipboard
     cliphist
-    nixos-unstable.nwg-look
+    unstable-pkgs.nwg-look
 
     # GPU stuff
     amdvlk

@@ -4,6 +4,8 @@
   inputs = {
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/d89fc19e";
+    nixpkgs-experimental.url = "github:nixos/nixpkgs/a39ed32a";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
@@ -22,7 +24,8 @@
     #};
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: let
+  outputs = {
+    self, nixpkgs, home-manager, nixpkgs-unstable, nixpkgs-experimental, ... }@inputs: let
     system = "x86_64-linux";
     homeStateVersion = "24.11";
     user = "simon";

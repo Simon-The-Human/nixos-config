@@ -1,14 +1,7 @@
-{ config, pkgs, ... }:
-
+{ config, pkgs, nixpkgs-unstable, nixpkgs-experimental, ... }:
 let
-  nixos-unstable = import
-    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/d89fc19e)
-    # reuse the current configuration
-    { config = config.nixpkgs.config; };
-  unstable = import
-    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/a39ed32a)
-    # reuse the current configuration
-    { config = config.nixpkgs.config; };
+  unstable-pkgs = import nixpkgs-unstable { inherit (config.nixpkgs) config; };
+  experimental-pkgs = import nixpkgs-experimental { inherit (config.nixpkgs) config; };
 in
 {
   nixpkgs.config.allowUnfree = true;
@@ -27,7 +20,7 @@ in
     alacritty
     audacity
     jan
-    nixos-unstable.telegram-desktop
+    unstable-pkgs.telegram-desktop
     mattermost-desktop
     mmctl
     # unstable.steam-run
@@ -37,19 +30,19 @@ in
     })
     # discord
     vesktop
-    # nixos-unstable.yandex-browser
+    # unstable-pkgs.yandex-browser
     obs-studio
     rofi
     wofi
     mpv
-    nixos-unstable.luanti
+    unstable-pkgs.luanti
     kdenlive
     gparted
     # obsidian
     zoom-us
     qbittorrent
     libreoffice
-    nixos-unstable.freecad-wayland
+    unstable-pkgs.freecad-wayland
     yandex-disk
     unstable.yandex-music
 
@@ -116,7 +109,7 @@ in
     xdg-desktop-portal-hyprland
 
     # CLI utils
-    nixos-unstable.awscli
+    unstable-pkgs.awscli
     bluez
     bluez-tools
     brightnessctl
@@ -148,14 +141,14 @@ in
     scrot
     systemd
     openssh
-    nixos-unstable.openfortivpn-webview
+    unstable-pkgs.openfortivpn-webview
     packer
     swww
     tree
     unzip
     wget
     yt-dlp
-    nixos-unstable.yandex-cloud
+    unstable-pkgs.yandex-cloud
     zip
     zram-generator
 
@@ -197,7 +190,7 @@ in
     # Other
     openvpn
     networkmanager-openvpn
-    # nixos-unstable.amnezia-vpn
+    # unstable-pkgs.amnezia-vpn
     openconnect
     home-manager
     spice-vdagent
