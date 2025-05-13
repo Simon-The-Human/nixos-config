@@ -27,6 +27,7 @@
       system = system;
       specialArgs = {
         inherit inputs stateVersion hostname user;
+        inherit nixpkgs-unstable nixpkgs-experimental;
       };
 
       modules = [
