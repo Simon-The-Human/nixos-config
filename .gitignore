@@ -1,1 +1,3 @@
 *.zip
+*.qcow2
+/result
