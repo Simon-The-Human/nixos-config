@@ -37,6 +37,7 @@
       system = system;
       specialArgs = {
         inherit inputs stateVersion hostname user;
+        inherit nixpkgs-unstable nixpkgs-experimental;
       };
 
       modules = [
@@ -49,7 +50,6 @@
       configs // {
         "${host.hostname}" = makeSystem {
           inherit (host) hostname stateVersion;
-          inherit nixpkgs-unstable nixpkgs-experimental;
         };
       }) {} hosts;
 
