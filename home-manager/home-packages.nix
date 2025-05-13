@@ -2,11 +2,11 @@
 
 let
   nixos-unstable = import
-    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/nixos-unstable)
+    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/d89fc19e)
     # reuse the current configuration
     { config = config.nixpkgs.config; };
   unstable = import
-    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/master)
+    (builtins.fetchTarball https://github.com/nixos/nixpkgs/tarball/a39ed32a)
     # reuse the current configuration
     { config = config.nixpkgs.config; };
 in
