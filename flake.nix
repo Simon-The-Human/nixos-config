@@ -23,14 +23,25 @@
       { hostname = "digital_spirit"; stateVersion = "24.11"; }
     ];
 
+    # Общая функция для создания overlays
+    mkOverlays = system: [
+      (final: prev: {
+        unstable = inputs.nixpkgs-unstable.legacyPackages.${system};
+        experimental = inputs.nixpkgs-experimental.legacyPackages.${system};
+      })
+    ];
+
     makeSystem = { hostname, stateVersion }: nixpkgs.lib.nixosSystem {
-      system = system;
+      inherit system;
       specialArgs = {
-        inherit inputs stateVersion hostname user;
-        inherit nixpkgs-unstable nixpkgs-experimental;
+        inherit inputs user hostname stateVersion;
       };
 
       modules = [
+        ({ config, ... }: {
+          # Добавляем overlays в системную конфигурацию
+          nixpkgs.overlays = mkOverlays config.nixpkgs.system;
+        })
         ./hosts/${hostname}/configuration.nix
       ];
     };
@@ -44,12 +55,13 @@
       }) {} hosts;
 
     homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = mkOverlays system;
+      };
       extraSpecialArgs = {
         inherit inputs homeStateVersion user;
-        inherit nixpkgs-unstable nixpkgs-experimental;
       };
-
       modules = [
         ./home-manager/home.nix
       ];
