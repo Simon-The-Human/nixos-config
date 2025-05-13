@@ -12,7 +12,7 @@ in
     kdenlive
     mattermost-desktop
     # jre8
-    # qemu
+    qemu
     # quickemu
 
     # Wayland stuff
