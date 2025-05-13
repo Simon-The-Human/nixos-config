@@ -1,7 +1,7 @@
 { config, pkgs, nixpkgs-unstable, nixpkgs-experimental, ... }:
 let
-  unstable-pkgs = import nixpkgs-unstable { inherit (config.nixpkgs) config; };
-  experimental-pkgs = import nixpkgs-experimental { inherit (config.nixpkgs) config; };
+  unstable = import nixpkgs-unstable { inherit (config.nixpkgs) config; };
+  experimental = import nixpkgs-experimental { inherit (config.nixpkgs) config; };
 in
 {
   nixpkgs.config.allowUnfree = true;
@@ -20,7 +20,7 @@ in
     alacritty
     audacity
     jan
-    unstable-pkgs.telegram-desktop
+    unstable.telegram-desktop
     mattermost-desktop
     mmctl
     # unstable.steam-run
@@ -30,19 +30,19 @@ in
     })
     # discord
     vesktop
-    # unstable-pkgs.yandex-browser
+    # unstable.yandex-browser
     obs-studio
     rofi
     wofi
     mpv
-    unstable-pkgs.luanti
+    unstable.luanti
     kdenlive
     gparted
     # obsidian
     zoom-us
     qbittorrent
     libreoffice
-    unstable-pkgs.freecad-wayland
+    unstable.freecad-wayland
     yandex-disk
     unstable.yandex-music
 
@@ -109,7 +109,7 @@ in
     xdg-desktop-portal-hyprland
 
     # CLI utils
-    unstable-pkgs.awscli
+    unstable.awscli
     bluez
     bluez-tools
     brightnessctl
@@ -141,14 +141,14 @@ in
     scrot
     systemd
     openssh
-    unstable-pkgs.openfortivpn-webview
+    unstable.openfortivpn-webview
     packer
     swww
     tree
     unzip
     wget
     yt-dlp
-    unstable-pkgs.yandex-cloud
+    unstable.yandex-cloud
     zip
     zram-generator
 
@@ -190,7 +190,7 @@ in
     # Other
     openvpn
     networkmanager-openvpn
-    # unstable-pkgs.amnezia-vpn
+    # unstable.amnezia-vpn
     openconnect
     home-manager
     spice-vdagent

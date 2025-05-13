@@ -1,7 +1,7 @@
 { config, pkgs, nixpkgs-unstable, nixpkgs-experimental, ... }:
 let
-  unstable-pkgs = import nixpkgs-unstable { inherit (config.nixpkgs) config; };
-  experimental-pkgs = import nixpkgs-experimental { inherit (config.nixpkgs) config; };
+  unstable = import nixpkgs-unstable { inherit (config.nixpkgs) config; };
+  experimental = import nixpkgs-experimental { inherit (config.nixpkgs) config; };
 in
 {
   nixpkgs.config = {
@@ -19,7 +19,7 @@ in
     xwayland
     wl-clipboard
     cliphist
-    unstable-pkgs.nwg-look
+    unstable.nwg-look
 
     # GPU stuff
     amdvlk
