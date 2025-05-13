@@ -4,6 +4,7 @@
     allowUnfree = true;
   };
   environment.systemPackages = with pkgs; [
+    git
     gcc
     kdenlive
     mattermost-desktop
