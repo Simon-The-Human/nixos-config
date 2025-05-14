@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 {
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.permittedInsecurePackages = [
+    "python-2.7.18.8"
+  ];
 
   home.packages = with pkgs; [
     # Packages in each category are sorted alphabetically
@@ -11,7 +14,7 @@
     imv
     mpv
     obs-studio
-    obsidian
+    # obsidian
     pavucontrol
     alacritty
     audacity
@@ -20,10 +23,6 @@
     mattermost-desktop
     mmctl
     # unstable.steam-run
-    (vivaldi.override {
-      proprietaryCodecs = true;
-      enableWidevine = false;
-    })
     # discord
     vesktop
     # unstable.yandex-browser
@@ -80,29 +79,14 @@
     emacs
     emacsPackages.vterm
     emacsPackages.fira-code-mode
-    gcc
-    minikube
-    gnumake
     graphviz
     # jetbrains.pycharm-community-src
     vscode
     nodejs
     poetry
     pyenv
-    python
-    python39
-    python310
-    python311
-    python311Packages.requests
-    racket
     sqlite
     vim
-
-    # WM stuff
-    libsForQt5.xwaylandvideobridge
-    libnotify
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-hyprland
 
     # CLI utils
     unstable.awscli
@@ -171,11 +155,6 @@
     waybar
     xdg-utils
 
-    # Sound
-    pipewire
-    pulseaudio
-    pamixer
-
     # Screenshotting
     grim
     grimblast
@@ -184,24 +163,5 @@
     swappy
 
     # Other
-    openvpn
-    networkmanager-openvpn
-    # unstable.amnezia-vpn
-    openconnect
-    home-manager
-    spice-vdagent
-    libtool
-    papirus-nord
-    # (jdk17.override {
-    #   enableJavaFX = true;}
-    # )
-    # virtualbox
-    # qemu_full
-    vagrant
-    nixfmt-classic
-    openldap
-    update-systemd-resolved
-    cyrus_sasl
-    zapret
   ];
 }

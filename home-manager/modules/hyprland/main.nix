@@ -13,7 +13,10 @@
         "XDG_SCREENSHOTS_DIR,$HOME/screens"
       ];
 
-      monitor = ",1920x1080@60,auto,1";
+      monitor = [
+        "DP-1,preferred,0x0,1"
+        "eDP-1,preferred,1920x800,1"
+      ];
       "$mainMod" = "SUPER";
       "$terminal" = "alacritty";
       "$fileManager" = "$terminal -e sh -c 'ranger'";
@@ -37,7 +40,7 @@
         resize_on_border = true;
 
         allow_tearing = false;
-        layout = "master";
+        layout = "dwindle";
       };
 
       decoration = {
@@ -60,8 +63,8 @@
       };
 
       input = {
-        kb_layout = "us,ru,il";
-        kb_options = "grp:caps_toggle";
+        kb_layout = "us,ru";
+        kb_options = "grp:win_space_toggle";
       };
 
       gestures = {
@@ -75,11 +78,11 @@
         preserve_split = true;
       };
 
-      master = {
-        new_status = "slave";
-        new_on_top = true;
-        mfact = 0.5;
-      };
+      # master = {
+      #   new_status = "slave";
+      #   new_on_top = true;
+      #   mfact = 0.5;
+      # };
 
       misc = {
         force_default_wallpaper = 0;

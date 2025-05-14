@@ -4,12 +4,18 @@
     allowUnfree = true;
   };
   environment.systemPackages = with pkgs; [
+    emacs
+    (vivaldi.override {
+      proprietaryCodecs = true;
+      enableWidevine = false;
+    })
     git
     gcc
     kdenlive
     mattermost-desktop
+    home-manager
     # jre8
-    qemu
+    qemu_full
     # quickemu
 
     # Wayland stuff
@@ -18,6 +24,39 @@
     cliphist
     unstable.nwg-look
 
+    # WM stuff
+    libsForQt5.xwaylandvideobridge
+    libnotify
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-hyprland
+
+    # Sound
+    pipewire
+    pulseaudio
+    pamixer
+
+    openvpn
+    networkmanager-openvpn
+    # unstable.amnezia-vpn
+    openconnect
+    spice-vdagent
+    libtool
+    # (jdk17.override {
+    #   enableJavaFX = true;}
+    # )
+    # virtualbox
+    # qemu_full
+    vagrant
+    nixfmt-classic
+    openldap
+    cyrus_sasl
+    zapret
+    minikube
+    gnumake
+    racket
+    python310
+    python311
+    python311Packages.requests
     # GPU stuff
     amdvlk
     # rocm-opencl-icd

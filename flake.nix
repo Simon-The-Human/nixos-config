@@ -26,8 +26,14 @@
     # Общая функция для создания overlays
     mkOverlays = system: [
       (final: prev: {
-        unstable = inputs.nixpkgs-unstable.legacyPackages.${system};
-        experimental = inputs.nixpkgs-experimental.legacyPackages.${system};
+        unstable = import inputs.nixpkgs-unstable {
+          inherit system;
+          config.allowUnfree = true;
+        };
+        experimental = import inputs.nixpkgs-experimental {
+          inherit system;
+          config.allowUnfree = true;
+        };
       })
     ];
 
@@ -40,7 +46,8 @@
       modules = [
         ({ config, ... }: {
           # Добавляем overlays в системную конфигурацию
-          nixpkgs.overlays = mkOverlays config.nixpkgs.system;
+         nixpkgs.overlays = mkOverlays config.nixpkgs.system;
+         nixpkgs.config.allowUnfree = true;
         })
         ./hosts/${hostname}/configuration.nix
       ];
