@@ -15,23 +15,23 @@
           show-special = true;
           special-visible-only = true;
           all-outputs = false;
-          format = "{icon}";
-          format-icons = {
-            "1" = "";
-            "2" = "";
-            "3" = "";
-            "4" = "";
-            "5" = "";
-            "6" = "";
-            "7" = "";
-            "8" = "";
-            "9" = "";
-            "magic" = "";
-          };
+          # format = "{icon}";
+          # format-icons = {
+          #   "1" = "";
+          #   "2" = "";
+          #   "3" = "";
+          #   "4" = "";
+          #   "5" = "";
+          #   "6" = "";
+          #   "7" = "";
+          #   "8" = "";
+          #   "9" = "";
+          #   "magic" = "";
+          # };
 
-          persistent-workspaces = {
-            "*" = 9;
-          };
+          # persistent-workspaces = {
+          #   "*" = 9;
+          # };
         };
 
         "hyprland/language" = {
