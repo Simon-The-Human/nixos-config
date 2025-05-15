@@ -5,7 +5,14 @@
     defaultUserShell = pkgs.zsh;
     users.${user} = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "networkmanager" ];
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+        "input"
+        "libvirtd"
+        "docker"
+        "vboxusers"
+      ];
     };
   };
 
