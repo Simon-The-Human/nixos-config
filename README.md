@@ -78,7 +78,7 @@ To get started with this setup, follow these steps:
 
 ## 😎 Enjoy!
 
-![screenshot](./screenshots/screenshot2.png)
+![screenshot](./screenshots/screenshot3.png)
 
 ## 🤝 Contributions
 
