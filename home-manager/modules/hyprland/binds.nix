@@ -96,7 +96,8 @@ in {
         # Configuration files
         ''$mainMod SHIFT, N, exec, alacritty -e sh -c "rb"''
         ''$mainMod SHIFT, C, exec, alacritty -e sh -c "conf"''
-        '', Print, exec, grim -g "$(slurp)" - | swappy -f -''
+        # '', Print, exec, grim -g "$(slurp)" - | swappy -f -''
+        '', Print, exec, grimblast --notify --freeze copysave area''
 
         # Waybar
         "$mainMod, B, exec, pkill -SIGUSR1 waybar"
