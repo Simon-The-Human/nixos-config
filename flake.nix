@@ -13,8 +13,6 @@
       url = "github:danth/stylix/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    update-systemd-resolved.url = "github:jonathanio/update-systemd-resolved";
-    update-systemd-resolved.inputs.nixpkgs.follows = "nixpkgs"; # optional
   };
 
   outputs = {
@@ -23,7 +21,6 @@
     home-manager,
     nixpkgs-unstable,
     nixpkgs-experimental,
-    update-systemd-resolved,
     ...
   }@inputs:
     let
@@ -61,7 +58,6 @@
             nixpkgs.config.allowUnfree = true;
           })
           ./hosts/${hostname}/configuration.nix
-          update-systemd-resolved.nixosModules.update-systemd-resolved
         ];
       };
 
