@@ -54,7 +54,7 @@
 
         "custom/weather" = {
           format = " {} ";
-          exec = "curl -s 'https://wttr.in/Moscow?format=%c%t'";
+          exec = "curl 'https://wttr.in/?format=%c%t'";
           interval = 300;
           class = "weather";
         };
