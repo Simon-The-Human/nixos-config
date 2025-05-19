@@ -54,7 +54,7 @@
 
         "custom/weather" = {
           format = " {} ";
-          exec = "curl 'https://wttr.in/?format=%c%t'";
+          exec = "curl 'https://wttr.in/?Electrostal&format=%c%t'";
           interval = 300;
           class = "weather";
         };
