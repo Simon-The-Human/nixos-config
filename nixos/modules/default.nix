@@ -11,6 +11,7 @@
     ./hyprland.nix
     ./java.nix
     ./kernel.nix
+    ./locale.nix
     ./mime.nix
     ./net.nix
     ./nh.nix
