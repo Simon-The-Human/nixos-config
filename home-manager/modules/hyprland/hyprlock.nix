@@ -39,7 +39,7 @@
           inner_color = "rgb(40, 40, 40)";
           outer_color = "rgb(60, 56, 54)";
           outline_thickness = 5;
-          placeholder_text = "sussy baka";
+          placeholder_text = "$LAYOUT";
           shadow_passes = 1;
         }
       ];

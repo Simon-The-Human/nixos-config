@@ -23,8 +23,8 @@ in {
 
         "$mainMod, Return, exec, alacritty"
         "$mainMod, Q, killactive,"
+        "$mainMod, E, exec, $fileManager"
         # "$mainMod, M, exit,"
-        "$mainMod, E, exec, dolphin"
         "$mainMod, F, togglefloating,"
         "$mainMod, D, exec, wofi --show drun"
         "$mainMod, P, pseudo, # dwindle"
