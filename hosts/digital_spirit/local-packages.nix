@@ -29,6 +29,7 @@
     libnotify
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
+    xdg-utils
 
     # Sound
     pipewire
