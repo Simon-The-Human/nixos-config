@@ -4,7 +4,7 @@
     baseIndex = 1;
     mouse = true;
     escapeTime = 0;
-    keyMode = "vi";
+    keyMode = "emacs";
     terminal = "screen-256color";
     extraConfig = ''
       set -as terminal-features ",alacritty*:RGB"
