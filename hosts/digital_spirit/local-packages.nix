@@ -36,6 +36,7 @@
     pulseaudio
     pamixer
 
+    chez
     openvpn
     networkmanager-openvpn
     # unstable.amnezia-vpn
@@ -58,6 +59,7 @@
     python310
     python311
     python311Packages.requests
+    python312
     # GPU stuff
     amdvlk
     # rocm-opencl-icd
