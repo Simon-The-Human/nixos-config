@@ -20,6 +20,7 @@
     ./nm.nix
     ./openssh.nix
     ./openvpn.nix
+    ./steam.nix
     ./sound.nix
     ./timezone.nix
     ./trim.nix
