@@ -1,8 +1,5 @@
-{ config, pkgs, ... }:
-{
-  nixpkgs.config = {
-    allowUnfree = true;
-  };
+{ config, pkgs, ... }: {
+  nixpkgs.config = { allowUnfree = true; };
   environment.systemPackages = with pkgs; [
     emacs
     (vivaldi.override {
@@ -14,9 +11,7 @@
     kdenlive
     mattermost-desktop
     home-manager
-    # jre8
     qemu_full
-    # quickemu
 
     # Wayland stuff
     xwayland
