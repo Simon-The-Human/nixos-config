@@ -7,12 +7,8 @@
         layer = "top";
         position = "top";
         height = 30;
-        modules-left = [
-          "hyprland/workspaces"
-        ];
-        modules-center = [
-          "hyprland/window"
-        ];
+        modules-left = [ "hyprland/workspaces" ];
+        modules-center = [ "hyprland/window" ];
         modules-right = [
           "hyprland/language"
           "custom/weather"
@@ -54,7 +50,7 @@
 
         "custom/weather" = {
           format = " {} ";
-          exec = "curl 'https://wttr.in/?Electrostal&format=%c%t'";
+          exec = "curl 'https://wttr.in/?format=%c%t'";
           interval = 300;
           class = "weather";
         };
@@ -70,7 +66,7 @@
             "phone" = "";
             "portable" = "";
             "car" = "";
-            "default" = ["" ""];
+            "default" = [ "" "" ];
           };
           on-click = "pavucontrol";
         };
@@ -83,7 +79,7 @@
           format = "{icon} {capacity}%";
           format-charging = " {capacity}%";
           format-alt = "{time} {icon}";
-          format-icons = ["" "" "" "" ""];
+          format-icons = [ "" "" "" "" "" ];
         };
 
         "clock" = {
