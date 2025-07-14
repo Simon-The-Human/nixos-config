@@ -14,10 +14,7 @@
         "GTK_USE_PORTAL,1"
       ];
 
-      monitor = [
-        "DP-1,preferred,0x0,1"
-        "eDP-1,preferred,1920x800,1"
-      ];
+      monitor = [ "DP-1,preferred,0x0,1" "eDP-1,preferred,1920x800,1" ];
       "$mainMod" = "SUPER";
       "$terminal" = "alacritty";
       "$fileManager" = "$terminal -e sh -c 'ranger'";
@@ -52,18 +49,12 @@
         active_opacity = 1.0;
         inactive_opacity = 1.0;
 
-        shadow = {
-          enabled = false;
-        };
+        shadow = { enabled = false; };
 
-        blur = {
-          enabled = false;
-        };
+        blur = { enabled = false; };
       };
 
-      animations = {
-        enabled = false;
-      };
+      animations = { enabled = false; };
 
       input = {
         kb_layout = "us,ru";
@@ -73,7 +64,7 @@
       gestures = {
         workspace_swipe = true;
         workspace_swipe_invert = false;
-        workspace_swipe_forever	= true;
+        workspace_swipe_forever = true;
       };
 
       dwindle = {
@@ -100,12 +91,13 @@
         "noborder,nofocus,class:(showmethekey-gtk)"
 
         "workspace 1,class:(vivaldi)"
+        "workspace 2,class:(emacs-client)"
         "workspace 2,class:(emacs)"
-        "workspace 3,class:(virt-manager)"
-        "workspace 4,class:(telegram)"
-        "workspace 4,class:(mattermost)"
-        "workspace 5,class:(vesktop)"
-        "workspace 5,class:(yandex-music)"
+        "workspace 3,class:(telegram)"
+        "workspace 3,class:(mattermost-desktop)"
+        "workspace 4,class:(vesktop)"
+        "workspace 4,class:(yandex-music)"
+        "workspace 5,class:(virt-manager)"
 
         "suppressevent maximize, class:.*"
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
@@ -118,10 +110,7 @@
         "nofocus, class:^(xwaylandvideobridge)$"
       ];
 
-      workspace = [
-        "w[tv1], gapsout:0, gapsin:0"
-        "f[1], gapsout:0, gapsin:0"
-      ];
+      workspace = [ "w[tv1], gapsout:0, gapsin:0" "f[1], gapsout:0, gapsin:0" ];
     };
   };
 }
