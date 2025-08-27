@@ -4,7 +4,6 @@
     ./audio.nix
     ./bluetooth.nix
     ./boot.nix
-    ./clamav.nix
     ./direnv.nix
     ./env.nix
     ./gamemode.nix
