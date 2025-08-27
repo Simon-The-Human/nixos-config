@@ -1,9 +1,6 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.permittedInsecurePackages = [
-    "python-2.7.18.8"
-  ];
+  nixpkgs.config.permittedInsecurePackages = [ "python-2.7.18.8" ];
 
   home.packages = with pkgs; [
     # Packages in each category are sorted alphabetically
