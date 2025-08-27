@@ -51,6 +51,7 @@
     htop
     hyprpicker
     ntfs3g
+    texliveTeTeX
     mediainfo
     microfetch
     playerctl
