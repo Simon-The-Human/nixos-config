@@ -60,6 +60,7 @@
     silicon
     udisks
     ueberzugpp
+    unrar
     unzip
     w3m
     wget
