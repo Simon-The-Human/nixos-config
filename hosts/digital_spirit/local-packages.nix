@@ -32,6 +32,7 @@
     pamixer
 
     chez
+    gparted
     openvpn
     networkmanager-openvpn
     # unstable.amnezia-vpn
@@ -42,7 +43,6 @@
     #   enableJavaFX = true;}
     # )
     # virtualbox
-    # qemu_full
     vagrant
     nixfmt-classic
     openldap
@@ -55,6 +55,7 @@
     python311
     python311Packages.requests
     python312
+    python313
     # GPU stuff
     amdvlk
     # rocm-opencl-icd

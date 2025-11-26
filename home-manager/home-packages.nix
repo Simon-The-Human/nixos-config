@@ -17,7 +17,6 @@
     audacity
     jan
     unstable.telegram-desktop
-    mattermost-desktop
     mmctl
     # unstable.steam-run
     # discord
@@ -29,7 +28,6 @@
     mpv
     unstable.luanti
     kdenlive
-    gparted
     # obsidian
     zoom-us
     qbittorrent
@@ -75,14 +73,14 @@
     cachix
     cmake
     direnv
-    emacs
-    emacsPackages.vterm
-    emacsPackages.fira-code-mode
+    experimental.emacs
+    experimental.emacsPackages.vterm
+    experimental.emacsPackages.fira-code-mode
     graphviz
     # jetbrains.pycharm-community-src
     vscode
     nodejs
-    poetry
+    experimental.poetry
     pyenv
     sqlite
     vim
