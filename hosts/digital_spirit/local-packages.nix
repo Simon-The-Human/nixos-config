@@ -53,7 +53,6 @@
     racket
     python310
     python311
-    python311Packages.requests
     python312
     python313
     # GPU stuff
