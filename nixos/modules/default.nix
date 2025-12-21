@@ -22,6 +22,7 @@
     ./openvpn.nix
     ./steam.nix
     ./sound.nix
+    ./softether.nix
     ./timezone.nix
     ./trim.nix
     ./user.nix
