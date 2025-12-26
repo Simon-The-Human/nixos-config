@@ -50,7 +50,7 @@
     zapret
     minikube
     gnumake
-    racket
+    experimental.racket
     python310
     python311
     python312
