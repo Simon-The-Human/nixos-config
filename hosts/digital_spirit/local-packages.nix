@@ -1,6 +1,7 @@
 { config, pkgs, ... }: {
   nixpkgs.config = { allowUnfree = true; };
   environment.systemPackages = with pkgs; [
+    experimental.brave
     emacs
     (vivaldi.override {
       proprietaryCodecs = true;
