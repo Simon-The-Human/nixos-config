@@ -17,12 +17,10 @@
         ovmf = {
           enable = true;
           packages = [
-            (
-              pkgs.OVMF.override {
-                secureBoot = true;
-                tpmSupport = true;
-              }
-            ).fd
+            (pkgs.OVMF.override {
+              secureBoot = true;
+              tpmSupport = true;
+            }).fd
           ];
         };
       };
@@ -31,11 +29,7 @@
       enable = true;
       storageDriver = "btrfs";
       daemon.settings = {
-        hosts = [
-          "unix:///var/run/docker.sock"
-          "fd://"
-          "tcp://0.0.0.0:2375"
-        ];
+        hosts = [ "unix:///var/run/docker.sock" "fd://" "tcp://0.0.0.0:2375" ];
       };
     };
   };
