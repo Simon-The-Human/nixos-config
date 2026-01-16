@@ -56,7 +56,7 @@
     python311
     python312
     python313
-    experimental.poetry
+    unstable.poetry
 
     # GPU stuff
     amdvlk
