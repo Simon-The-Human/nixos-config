@@ -4,10 +4,10 @@
     virt-manager.package = pkgs.virt-manager;
   };
   virtualisation = {
-    virtualbox.host = {
-      enable = true;
-      enableExtensionPack = true;
-    };
+    # virtualbox.host = {
+    #   enable = true;
+    #   enableExtensionPack = true;
+    # };
     libvirtd = {
       enable = true;
       qemu = {
