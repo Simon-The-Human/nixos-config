@@ -33,8 +33,8 @@
     qbittorrent
     libreoffice
     unstable.freecad-wayland
-    yandex-disk
-    unstable.yandex-music
+    experimental.yandex-disk
+    experimental.yandex-music
 
     # CLI utils
     bc
@@ -125,7 +125,7 @@
     unzip
     wget
     yt-dlp
-    unstable.yandex-cloud
+    experimental.yandex-cloud
     zip
     zram-generator
 
