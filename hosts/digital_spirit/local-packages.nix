@@ -56,6 +56,8 @@
     python311
     python312
     python313
+    experimental.poetry
+
     # GPU stuff
     amdvlk
     # rocm-opencl-icd

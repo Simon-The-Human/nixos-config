@@ -80,7 +80,6 @@
     # jetbrains.pycharm-community-src
     vscode
     nodejs
-    experimental.poetry
     pyenv
     sqlite
     vim
