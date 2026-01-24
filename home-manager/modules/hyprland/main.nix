@@ -91,7 +91,7 @@
         "noborder,nofocus,class:(showmethekey-gtk)"
 
         "workspace 1,class:(vivaldi)"
-        "workspace 2,class:(emacs-client)"
+        "workspace 2,class:(emacsclient)"
         "workspace 2,class:(emacs)"
         "workspace 3,class:(telegram)"
         "workspace 3,class:(mattermost-desktop)"
