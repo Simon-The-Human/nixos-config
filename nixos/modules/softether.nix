@@ -2,7 +2,7 @@
 
 {
   services.softether = {
-    package = pkgs.experimental.softether;
+    package = pkgs.softether;
     enable = true;
   };
 }
