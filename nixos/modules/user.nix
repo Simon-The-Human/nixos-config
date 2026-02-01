@@ -12,6 +12,7 @@
         "libvirtd"
         "docker"
         "vboxusers"
+        "syncthing"
       ];
     };
   };

@@ -5,5 +5,4 @@
     package = pkgs.experimental.softether;
     enable = true;
   };
-
 }
