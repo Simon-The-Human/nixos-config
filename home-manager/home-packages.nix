@@ -29,6 +29,7 @@
     unstable.luanti
     kdenlive
     # obsidian
+    element-desktop
     zoom-us
     qbittorrent
     libreoffice
