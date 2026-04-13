@@ -16,7 +16,7 @@
     alacritty
     audacity
     jan
-    unstable.telegram-desktop
+    experimental.telegram-desktop
     mmctl
     # unstable.steam-run
     # discord
