@@ -33,7 +33,8 @@
     pamixer
 
     chez
-    gparted
+    experimental.gparted-full
+    experimental.parted
     openvpn
     networkmanager-openvpn
     # unstable.amnezia-vpn
