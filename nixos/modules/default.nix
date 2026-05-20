@@ -27,7 +27,7 @@
     ./trim.nix
     ./user.nix
     ./virtmanager.nix
-    ./zapret.nix
+    # ./zapret.nix
     ./zram.nix
   ];
 }
