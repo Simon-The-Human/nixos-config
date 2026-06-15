@@ -3,6 +3,13 @@
 {
   networking = {
     networkmanager.enable = true;
+    networkmanager.insertNameservers = [
+      "10.92.12.253"
+      "192.168.1.1"
+      "77.88.8.8"
+      "8.8.8.8"
+      "dns.nullsproxy.com"
+    ];
     # openconnect = {
     #   # package = pkgs.networkmanager-openconnect;
     #   interfaces = {
@@ -18,6 +25,8 @@
     #   };
     # };
     nameservers = [
+      "10.92.12.253"
+      "192.168.1.1"
       "77.88.8.8"
       "8.8.8.8"
       "dns.nullsproxy.com"
@@ -26,9 +35,7 @@
     firewall = {
       enable = true;
       trustedInterfaces = [ "docker0" ];
-      interfaces.docker0 = {
-        allowedTCPPorts = [ 2375 1337 ];
-      };
+      interfaces.docker0 = { allowedTCPPorts = [ 2375 1337 ]; };
       extraCommands = ''
         iptables -t nat -A POSTROUTING -s 192.168.122.0/24 -j MASQUERADE
       '';
