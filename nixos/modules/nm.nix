@@ -4,8 +4,8 @@
   networking = {
     networkmanager.enable = true;
     networkmanager.insertNameservers = [
-      "10.92.12.253"
       "192.168.1.1"
+      "10.92.12.253"
       "77.88.8.8"
       "8.8.8.8"
       "dns.nullsproxy.com"
@@ -25,8 +25,8 @@
     #   };
     # };
     nameservers = [
-      "10.92.12.253"
       "192.168.1.1"
+      "10.92.12.253"
       "77.88.8.8"
       "8.8.8.8"
       "dns.nullsproxy.com"
