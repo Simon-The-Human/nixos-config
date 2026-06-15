@@ -24,13 +24,13 @@
     #     };
     #   };
     # };
-    nameservers = [
-      "192.168.1.1"
-      "10.92.12.253"
-      "77.88.8.8"
-      "8.8.8.8"
-      "dns.nullsproxy.com"
-    ];
+    # nameservers = [
+    #   "192.168.1.1"
+    #   "10.92.12.253"
+    #   "77.88.8.8"
+    #   "8.8.8.8"
+    #   "dns.nullsproxy.com"
+    # ];
 
     firewall = {
       enable = true;
