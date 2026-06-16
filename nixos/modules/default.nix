@@ -19,8 +19,7 @@
     ./nix-ld.nix
     ./nm.nix
     ./openssh.nix
-    ./openvpn.nix
-    ./resolved.nix
+    # ./resolved.nix
     ./steam.nix
     ./sound.nix
     ./softether.nix

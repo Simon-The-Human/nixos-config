@@ -3,34 +3,9 @@
 {
   networking = {
     networkmanager.enable = true;
-    networkmanager.insertNameservers = [
-      "192.168.1.1"
-      "10.92.12.253"
-      "77.88.8.8"
-      "8.8.8.8"
-      "dns.nullsproxy.com"
-    ];
-    # openconnect = {
-    #   # package = pkgs.networkmanager-openconnect;
-    #   interfaces = {
-    #     adsw_anyconnect = {
-    #       gateway = "connect2.rubytech.ru";
-    #       protocol = "anyconnect";
-    #       user = "SSerov";
-    #       passwordFile = "/var/lib/secrets/adsw-anyconnect-pw";
-    #       extraOptions = {
-    #         useragent = "AnyConnect";
-    #       };
-    #     };
-    #   };
-    # };
-    # nameservers = [
-    #   "192.168.1.1"
-    #   "10.92.12.253"
-    #   "77.88.8.8"
-    #   "8.8.8.8"
-    #   "dns.nullsproxy.com"
-    # ];
+    networkmanager.dns = "systemd-resolved";
+
+    nameservers = [ "192.168.1.1" ];
 
     firewall = {
       enable = true;
@@ -41,4 +16,12 @@
       '';
     };
   };
+
+  services.resolved.enable = true;
+
+  services.openvpn.servers.officeVPN = {
+    config = "config /home/simon/ovpn/s.serov@arenadata.io.ovpn";
+    updateResolvConf = false;
+  };
+
 }
