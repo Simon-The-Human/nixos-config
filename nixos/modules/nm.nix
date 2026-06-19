@@ -1,10 +1,12 @@
 { pkgs, ... }:
 
-{
+let
+  updateResolvedScript =
+    "${pkgs.update-systemd-resolved}/libexec/openvpn/update-systemd-resolved";
+in {
   networking = {
     networkmanager.enable = true;
     networkmanager.dns = "systemd-resolved";
-
     nameservers = [ "192.168.1.1" ];
 
     firewall = {
@@ -19,8 +21,17 @@
 
   services.resolved.enable = true;
 
+  environment.systemPackages = with pkgs; [ update-systemd-resolved ];
+
   services.openvpn.servers.officeVPN = {
-    config = "config /home/simon/ovpn/s.serov@arenadata.io.ovpn";
+    config = ''
+      config /home/simon/ovpn/s.serov@arenadata.io.ovpn
+      script-security 2
+      up ${updateResolvedScript}
+      up-restart
+      down ${updateResolvedScript}
+      down-pre
+    '';
     updateResolvConf = false;
   };
 
