@@ -50,7 +50,6 @@
     htop
     hyprpicker
     ntfs3g
-    unstable.texliveMedium
     mediainfo
     microfetch
     playerctl
