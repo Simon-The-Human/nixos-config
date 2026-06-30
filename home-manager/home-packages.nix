@@ -26,6 +26,7 @@
     rofi
     wofi
     mpv
+    mindustry-wayland
     unstable.luanti
     kdenlive
     # obsidian
