@@ -9,7 +9,7 @@
     ./starship.nix
     ./stylix.nix
     ./swaync
-    ./texlive.nix
+    # ./texlive.nix
     ./tmux.nix
     ./waybar
     ./wofi
