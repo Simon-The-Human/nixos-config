@@ -19,8 +19,6 @@
     experimental.telegram-desktop
     mmctl
     # unstable.steam-run
-    # discord
-    vesktop
     # unstable.yandex-browser
     obs-studio
     rofi
@@ -28,9 +26,7 @@
     mpv
     mindustry-wayland
     unstable.luanti
-    kdenlive
-    # obsidian
-    element-desktop
+    # element-desktop
     zoom-us
     qbittorrent
     libreoffice
@@ -79,7 +75,7 @@
     experimental.emacsPackages.fira-code-mode
     graphviz
     # jetbrains.pycharm-community-src
-    vscode
+    # vscode
     nodejs
     pyenv
     sqlite
@@ -103,10 +99,8 @@
     kafkactl
     lazygit
     guestfs-tools
-    light
     lux
     mediainfo
-    neofetch
     nix-index
     ntfs3g
     openssl

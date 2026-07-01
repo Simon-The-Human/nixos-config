@@ -9,7 +9,6 @@
     })
     git
     gcc
-    kdenlive
     mattermost-desktop
     home-manager
     qemu_full
@@ -21,15 +20,12 @@
     unstable.nwg-look
 
     # WM stuff
-    libsForQt5.xwaylandvideobridge
     libnotify
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
     xdg-utils
 
     # Sound
-    pipewire
-    pulseaudio
     pamixer
 
     chez
@@ -44,34 +40,30 @@
     # (jdk17.override {
     #   enableJavaFX = true;}
     # )
-    # virtualbox
-    vagrant
-    nixfmt-classic
+    nixfmt
     openldap
     cyrus_sasl
     zapret
     minikube
     gnumake
     experimental.racket
-    python310
-    python311
-    python312
+    # python311
+    # python312
     python313
+    python314
     unstable.poetry
 
     # GPU stuff
-    amdvlk
-    # rocm-opencl-icd
     glaxnimate
   ];
   fonts.packages = with pkgs; [
     jetbrains-mono
     noto-fonts
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     twemoji-color-font
     font-awesome
     powerline-fonts
     powerline-symbols
-    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
+    nerd-fonts.symbols-only
   ];
 }

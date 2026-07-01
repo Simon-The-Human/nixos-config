@@ -1,24 +1,17 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}:
-let
-  cfg = config.programs.amnezia-vpn;
-in
-{
-  options.programs.amnezia-vpn = {
+{ config, lib, pkgs, ... }:
+let cfg = config.programs.amnezia;
+in {
+  options.programs.amnezia = {
     enable = lib.mkEnableOption "The AmneziaVPN client";
   };
 
   config = lib.mkIf cfg.enable {
-    environment.systemPackages = [ pkgs.amnezia-vpn ];
-    services.dbus.packages = [ pkgs.amnezia-vpn ];
+    environment.systemPackages = [ pkgs.amnezia ];
+    services.dbus.packages = [ pkgs.amnezia ];
     services.resolved.enable = true;
 
     systemd = {
-      packages = [ pkgs.amnezia-vpn ];
+      packages = [ pkgs.amnezia ];
       services."AmneziaVPN".wantedBy = [ "multi-user.target" ];
     };
   };

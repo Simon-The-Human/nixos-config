@@ -1,5 +1,5 @@
 {
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   # commented due to deprecation
   # sound.enable = true;
 
