@@ -50,7 +50,9 @@
           { proportion = 1.0; }
         ];
 
-        default-column-width = { proportion = 0.5; };
+        default-column-width = {
+          proportion = 0.5;
+        };
 
         # Вставка из ayu-dark.kdl
         focus-ring = {
@@ -87,8 +89,26 @@
         { spawn-sh = "swww img ~/Pictures/wp.png"; }
         "xwayland-satellite"
         { spawn-sh = "waybar -c ~/.config/waybar/config_niri.json"; }
-        { spawn = [ "wl-paste" "--type" "text" "--watch" "cliphist" "store" ]; }
-        { spawn = [ "wl-paste" "--type" "image" "--watch" "cliphist" "store" ]; }
+        {
+          spawn = [
+            "wl-paste"
+            "--type"
+            "text"
+            "--watch"
+            "cliphist"
+            "store"
+          ];
+        }
+        {
+          spawn = [
+            "wl-paste"
+            "--type"
+            "image"
+            "--watch"
+            "cliphist"
+            "store"
+          ];
+        }
       ];
 
       # ===== Разное =====
@@ -174,7 +194,14 @@
 
       # ===== Рабочие столы =====
       workspaces = [
-        "1" "2" "3" "4" "5" "6" "7" "8"
+        "1"
+        "2"
+        "3"
+        "4"
+        "5"
+        "6"
+        "7"
+        "8"
         # "9" закомментирован в оригинале
       ];
 
@@ -223,13 +250,13 @@
         }
         {
           match = {
-            app-id = r#"^org\.wezfurlong\.wezterm$"#;
+            app-id = "^org\.wezfurlong\.wezterm$";
           };
           default-column-width = { }; # пустой блок
         }
         {
           match = {
-            app-id = r#"firefox$"#;
+            app-id = "firefox$";
             title = "^Picture-in-Picture$";
           };
           open-floating = true;
@@ -305,11 +332,21 @@
         # Яркость (привязано к Mod+Shift+Bracket...)
         "Mod+Shift+BracketRight" = {
           allow-when-locked = true;
-          spawn = [ "brightnessctl" "--class=backlight" "set" "+10%" ];
+          spawn = [
+            "brightnessctl"
+            "--class=backlight"
+            "set"
+            "+10%"
+          ];
         };
         "Mod+Shift+BracketLeft" = {
           allow-when-locked = true;
-          spawn = [ "brightnessctl" "--class=backlight" "set" "10%-" ];
+          spawn = [
+            "brightnessctl"
+            "--class=backlight"
+            "set"
+            "10%-"
+          ];
         };
 
         # Обзор
