@@ -5,6 +5,7 @@
     ./eza.nix
     ./git.nix
     ./hyprland
+    ./niri.nix
     ./ranger.nix
     ./starship.nix
     ./stylix.nix
