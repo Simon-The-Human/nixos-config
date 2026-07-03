@@ -357,7 +357,7 @@
         };
 
         # Закрыть окно
-        "Mod+Shift+C" = {
+        "Mod+Q" = {
           repeat = false;
           action.close-window = { };
         };
@@ -495,7 +495,7 @@
         };
 
         # Выход
-        "Mod+Q".action.quit.skip-confirmation = true;
+        "Ctrl+Alt+Delete".action.quit.skip-confirmation = true;
 
         # Выключение мониторов
         "Mod+Shift+P".action.power-off-monitors = { };
