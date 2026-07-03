@@ -4,7 +4,7 @@
     ./bat.nix
     ./eza.nix
     ./git.nix
-    ./hyprland
+    # ./hyprland
     ./niri.nix
     ./ranger.nix
     ./starship.nix
@@ -13,7 +13,7 @@
     # ./texlive.nix
     ./tmux.nix
     ./waybar
-    ./wofi
+    # ./wofi
     ./zathura.nix
     ./zsh.nix
   ];
