@@ -274,7 +274,7 @@
       # ===== Горячие клавиши =====
       binds = {
         # Отображение справки
-        "Mod+Shift+Slash".action.show-hotkey-overlay = null;
+        "Mod+Shift+Slash".action.show-hotkey-overlay = { };
 
         # Запуск приложений
         "Mod+Return" = {
@@ -353,77 +353,77 @@
         # Обзор
         "Mod+O" = {
           repeat = false;
-          action.toggle-overview = null;
+          action.toggle-overview = { };
         };
 
         # Закрыть окно
         "Mod+Shift+C" = {
           repeat = false;
-          action.close-window = null;
+          action.close-window = { };
         };
 
         # Навигация
-        "Mod+H".action.focus-column-left = null;
-        "Mod+J".action.focus-window-down = null;
-        "Mod+K".action.focus-window-up = null;
-        "Mod+L".action.focus-column-right = null;
+        "Mod+H".action.focus-column-left = { };
+        "Mod+J".action.focus-window-down = { };
+        "Mod+K".action.focus-window-up = { };
+        "Mod+L".action.focus-column-right = { };
 
         # Перемещение окон
-        "Mod+Shift+H".action.move-column-left = null;
-        "Mod+Shift+J".action.move-window-down = null;
-        "Mod+Shift+K".action.move-window-up = null;
-        "Mod+Shift+L".action.move-column-right = null;
+        "Mod+Shift+H".action.move-column-left = { };
+        "Mod+Shift+J".action.move-window-down = { };
+        "Mod+Shift+K".action.move-window-up = { };
+        "Mod+Shift+L".action.move-column-right = { };
 
         # Крайние позиции
-        "Mod+Home".action.focus-column-first = null;
-        "Mod+End".action.focus-column-last = null;
-        "Mod+Ctrl+Home".action.move-column-to-first = null;
-        "Mod+Ctrl+End".action.move-column-to-last = null;
+        "Mod+Home".action.focus-column-first = { };
+        "Mod+End".action.focus-column-last = { };
+        "Mod+Ctrl+Home".action.move-column-to-first = { };
+        "Mod+Ctrl+End".action.move-column-to-last = { };
 
         # Мониторы
-        "Mod+Ctrl+H".action.focus-monitor-left = null;
-        "Mod+Ctrl+J".action.focus-monitor-down = null;
-        "Mod+Ctrl+K".action.focus-monitor-up = null;
-        "Mod+Ctrl+L".action.focus-monitor-right = null;
+        "Mod+Ctrl+H".action.focus-monitor-left = { };
+        "Mod+Ctrl+J".action.focus-monitor-down = { };
+        "Mod+Ctrl+K".action.focus-monitor-up = { };
+        "Mod+Ctrl+L".action.focus-monitor-right = { };
 
-        "Mod+Shift+Ctrl+H".action.move-column-to-monitor-left = null;
-        "Mod+Shift+Ctrl+J".action.move-column-to-monitor-down = null;
-        "Mod+Shift+Ctrl+K".action.move-column-to-monitor-up = null;
-        "Mod+Shift+Ctrl+L".action.move-column-to-monitor-right = null;
+        "Mod+Shift+Ctrl+H".action.move-column-to-monitor-left = { };
+        "Mod+Shift+Ctrl+J".action.move-column-to-monitor-down = { };
+        "Mod+Shift+Ctrl+K".action.move-column-to-monitor-up = { };
+        "Mod+Shift+Ctrl+L".action.move-column-to-monitor-right = { };
 
         # Рабочие столы (перемещение)
-        "Mod+Shift+Page_Down".action.move-workspace-down = null;
-        "Mod+Shift+Page_Up".action.move-workspace-up = null;
-        "Mod+Shift+U".action.move-workspace-down = null;
-        "Mod+Shift+I".action.move-workspace-up = null;
+        "Mod+Shift+Page_Down".action.move-workspace-down = { };
+        "Mod+Shift+Page_Up".action.move-workspace-up = { };
+        "Mod+Shift+U".action.move-workspace-down = { };
+        "Mod+Shift+I".action.move-workspace-up = { };
 
         # Скролл колёсиком
         "Mod+WheelScrollDown" = {
           cooldown-ms = 150;
-          action.focus-workspace-down = null;
+          action.focus-workspace-down = { };
         };
         "Mod+WheelScrollUp" = {
           cooldown-ms = 150;
-          action.focus-workspace-up = null;
+          action.focus-workspace-up = { };
         };
         "Mod+Ctrl+WheelScrollDown" = {
           cooldown-ms = 150;
-          action.move-column-to-workspace-down = null;
+          action.move-column-to-workspace-down = { };
         };
         "Mod+Ctrl+WheelScrollUp" = {
           cooldown-ms = 150;
-          action.move-column-to-workspace-up = null;
+          action.move-column-to-workspace-up = { };
         };
 
-        "Mod+WheelScrollRight".action.focus-column-right = null;
-        "Mod+WheelScrollLeft".action.focus-column-left = null;
-        "Mod+Ctrl+WheelScrollRight".action.move-column-right = null;
-        "Mod+Ctrl+WheelScrollLeft".action.move-column-left = null;
+        "Mod+WheelScrollRight".action.focus-column-right = { };
+        "Mod+WheelScrollLeft".action.focus-column-left = { };
+        "Mod+Ctrl+WheelScrollRight".action.move-column-right = { };
+        "Mod+Ctrl+WheelScrollLeft".action.move-column-left = { };
 
-        "Mod+Shift+WheelScrollDown".action.focus-column-right = null;
-        "Mod+Shift+WheelScrollUp".action.focus-column-left = null;
-        "Mod+Ctrl+Shift+WheelScrollDown".action.move-column-right = null;
-        "Mod+Ctrl+Shift+WheelScrollLeft".action.move-column-left = null;
+        "Mod+Shift+WheelScrollDown".action.focus-column-right = { };
+        "Mod+Shift+WheelScrollUp".action.focus-column-left = { };
+        "Mod+Ctrl+Shift+WheelScrollDown".action.move-column-right = { };
+        "Mod+Ctrl+Shift+WheelScrollLeft".action.move-column-left = { };
 
         # Переключение рабочих столов по индексу
         "Mod+1".action.focus-workspace = 1;
@@ -447,21 +447,21 @@
         "Mod+Shift+9".action.move-column-to-workspace = 9;
 
         # Consume/Expel
-        "Mod+BracketLeft".action.action.consume-or-expel-window-left = null;
-        "Mod+BracketRight".action.action.consume-or-expel-window-right = null;
-        "Mod+Comma".action.action.consume-window-into-column = null;
-        "Mod+Period".action.action.expel-window-from-column = null;
+        "Mod+BracketLeft".action.action.consume-or-expel-window-left = { };
+        "Mod+BracketRight".action.action.consume-or-expel-window-right = { };
+        "Mod+Comma".action.action.consume-window-into-column = { };
+        "Mod+Period".action.action.expel-window-from-column = { };
 
         # Размеры
-        "Mod+R".action.action.switch-preset-column-width = null;
-        "Mod+Shift+R".action.action.switch-preset-window-height = null;
-        "Mod+Ctrl+R".action.action.reset-window-height = null;
-        "Mod+F".action.action.maximize-column = null;
-        "Mod+Shift+F".action.action.fullscreen-window = null;
-        "Mod+M".action.action.maximize-window-to-edges = null;
-        "Mod+Ctrl+F".action.action.expand-column-to-available-width = null;
-        "Mod+C".action.action.center-column = null;
-        "Mod+Ctrl+C".action.action.center-visible-columns = null;
+        "Mod+R".action.action.switch-preset-column-width = { };
+        "Mod+Shift+R".action.action.switch-preset-window-height = { };
+        "Mod+Ctrl+R".action.action.reset-window-height = { };
+        "Mod+F".action.action.maximize-column = { };
+        "Mod+Shift+F".action.action.fullscreen-window = { };
+        "Mod+M".action.action.maximize-window-to-edges = { };
+        "Mod+Ctrl+F".action.action.expand-column-to-available-width = { };
+        "Mod+C".action.action.center-column = { };
+        "Mod+Ctrl+C".action.action.center-visible-columns = { };
 
         "Mod+Minus" = {
           action.set-column-width = "-5%";
@@ -477,28 +477,28 @@
         };
 
         # Плавающий режим
-        "Mod+V".action.toggle-window-floating = null;
-        "Mod+Shift+V".action.switch-focus-between-floating-and-tiling = null;
+        "Mod+V".action.toggle-window-floating = { };
+        "Mod+Shift+V".action.switch-focus-between-floating-and-tiling = { };
 
         # Вкладки
-        "Mod+W".action.toggle-column-tabbed-display = null;
+        "Mod+W".action.toggle-column-tabbed-display = { };
 
         # Скриншоты
-        "Print".action.screenshot = null;
-        "Ctrl+Print".action.screenshot-screen = null;
-        "Alt+Print".action.screenshot-window = null;
+        "Print".action.screenshot = { };
+        "Ctrl+Print".action.screenshot-screen = { };
+        "Alt+Print".action.screenshot-window = { };
 
         # Ингибитор клавиш
         "Mod+Escape" = {
           allow-inhibiting = false;
-          action.toggle-keyboard-shortcuts-inhibit = null;
+          action.toggle-keyboard-shortcuts-inhibit = { };
         };
 
         # Выход
         "Mod+Q".action.quit.skip-confirmation = true;
 
         # Выключение мониторов
-        "Mod+Shift+P".action.power-off-monitors = null;
+        "Mod+Shift+P".action.power-off-monitors = { };
       };
     };
   };
