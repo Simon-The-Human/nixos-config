@@ -21,8 +21,8 @@
     # unstable.steam-run
     # unstable.yandex-browser
     obs-studio
-    rofi
-    wofi
+    fuzzel
+    swaynotificationcenter
     mpv
     mindustry-wayland
     unstable.luanti
