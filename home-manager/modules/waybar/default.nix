@@ -7,17 +7,17 @@
         layer = "top";
         position = "top";
         height = 30;
-        modules-left = [ "hyprland/workspaces" ];
-        modules-center = [ "hyprland/window" ];
+        modules-left = [ "niri/workspaces" ];
+        modules-center = [ "niri/window" ];
         modules-right = [
-          "hyprland/language"
+          "niri/language"
           "custom/weather"
           "pulseaudio"
           "battery"
           "clock"
           "tray"
         ];
-        "hyprland/workspaces" = {
+        "niri/workspaces" = {
           disable-scroll = true;
           show-special = true;
           special-visible-only = true;
@@ -41,7 +41,7 @@
           # };
         };
 
-        "hyprland/language" = {
+        "niri/language" = {
           format-en = "🇺🇸";
           format-ru = "🇷🇺";
           min-length = 5;
@@ -66,7 +66,10 @@
             "phone" = "";
             "portable" = "";
             "car" = "";
-            "default" = [ "" "" ];
+            "default" = [
+              ""
+              ""
+            ];
           };
           on-click = "pavucontrol";
         };
@@ -79,7 +82,13 @@
           format = "{icon} {capacity}%";
           format-charging = " {capacity}%";
           format-alt = "{time} {icon}";
-          format-icons = [ "" "" "" "" "" ];
+          format-icons = [
+            ""
+            ""
+            ""
+            ""
+            ""
+          ];
         };
 
         "clock" = {
