@@ -59,26 +59,26 @@
           enable = true;
           width = 5;
           active.gradient = {
-            from = "#eba54d";
-            to = "#80ab24";
+            from = "#d65d0e";
+            to = "#98971a";
             angle = 135;
           };
-          inactive.color = "#212733";
+          inactive.color = "#3c3836";
         };
 
         border = {
           width = 5;
           active.gradient = {
-            from = "#eba54d";
-            to = "#80ab24";
+            from = "#d65d0e";
+            to = "#98971a";
             angle = 135;
           };
-          inactive.color = "#212733"; # из темы
-          urgent.color = "#e7666a";
+          inactive.color = "#3c3836";
+          urgent.color = "#cc241d";
         };
 
         shadow = {
-          enable = false; # отключено
+          enable = false;
         };
       };
 
