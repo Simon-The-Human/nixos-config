@@ -447,21 +447,21 @@
         "Mod+Shift+9".action.move-column-to-workspace = 9;
 
         # Consume/Expel
-        "Mod+BracketLeft".action.action.consume-or-expel-window-left = { };
-        "Mod+BracketRight".action.action.consume-or-expel-window-right = { };
-        "Mod+Comma".action.action.consume-window-into-column = { };
-        "Mod+Period".action.action.expel-window-from-column = { };
+        "Mod+BracketLeft".action.consume-or-expel-window-left = { };
+        "Mod+BracketRight".action.consume-or-expel-window-right = { };
+        "Mod+Comma".action.consume-window-into-column = { };
+        "Mod+Period".action.expel-window-from-column = { };
 
         # Размеры
-        "Mod+R".action.action.switch-preset-column-width = { };
-        "Mod+Shift+R".action.action.switch-preset-window-height = { };
-        "Mod+Ctrl+R".action.action.reset-window-height = { };
-        "Mod+F".action.action.maximize-column = { };
-        "Mod+Shift+F".action.action.fullscreen-window = { };
-        "Mod+M".action.action.maximize-window-to-edges = { };
-        "Mod+Ctrl+F".action.action.expand-column-to-available-width = { };
-        "Mod+C".action.action.center-column = { };
-        "Mod+Ctrl+C".action.action.center-visible-columns = { };
+        "Mod+R".action.switch-preset-column-width = { };
+        "Mod+Shift+R".action.switch-preset-window-height = { };
+        "Mod+Ctrl+R".action.reset-window-height = { };
+        "Mod+F".action.maximize-column = { };
+        "Mod+Shift+F".action.fullscreen-window = { };
+        "Mod+M".action.maximize-window-to-edges = { };
+        "Mod+Ctrl+F".action.expand-column-to-available-width = { };
+        "Mod+C".action.center-column = { };
+        "Mod+Ctrl+C".action.center-visible-columns = { };
 
         "Mod+Minus" = {
           action.set-column-width = "-5%";
