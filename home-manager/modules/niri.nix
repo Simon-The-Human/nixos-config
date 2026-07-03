@@ -4,7 +4,7 @@
     enable = true;
 
     settings = {
-      # ===== Входные устройства =====
+      # === Входные устройства ===
       input = {
         keyboard = {
           xkb = {
@@ -33,7 +33,7 @@
         };
       };
 
-      # ===== Оформление и геометрия =====
+      # === Оформление и геометрия ===
       layout = {
         gaps = 16;
         center-focused-column = "never";
@@ -80,7 +80,7 @@
         };
       };
 
-      # ===== Автозапуск =====
+      # === Автозапуск ===
       spawn-at-startup = [
         { sh = "xwayland-satellite"; }
         { sh = "waybar -c ~/.config/waybar/config_niri.json"; }
@@ -106,7 +106,7 @@
         }
       ];
 
-      # ===== Разное =====
+      # === Разное ===
       hotkey-overlay = {
         # skip-at-startup = true; # раскомментировать при желании
       };
@@ -114,7 +114,7 @@
       prefer-no-csd = true; # соответствует "prefer-no-csd" в KDL
       screenshot-path = "~/screens/Screenshot from %Y-%m-%d %H-%M-%S.png";
 
-      # ===== Анимации =====
+      # === Анимации ===
       animations = {
         # off = true; # если нужно отключить
         workspace-switch = {
@@ -186,11 +186,11 @@
         };
       };
 
-      # ===== Рабочие столы =====
+      # === Рабочие столы ===
       # workspaces = [
       # ];
 
-      # ===== Правила для окон =====
+      # === Правила для окон ===
       window-rules = [
         {
           matches = [
@@ -271,7 +271,7 @@
         # }
       ];
 
-      # ===== Горячие клавиши =====
+      # === Горячие клавиши ===
       binds = {
         # Отображение справки
         "Mod+Shift+Slash".action.show-hotkey-overlay = { };
