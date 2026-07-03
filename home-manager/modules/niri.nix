@@ -1,7 +1,9 @@
 { pkgs, inputs, ... }: {
+  nixpkgs.overlays = [ inputs.niri.overlays.niri ];
   imports = [ inputs.niri.homeModules.niri ];
   programs.niri = {
     enable = true;
+    package = pkgs.niri-unstable;
 
     settings = {
       # === Входные устройства ===
@@ -83,7 +85,7 @@
       # === Автозапуск ===
       spawn-at-startup = [
         { sh = "xwayland-satellite"; }
-        { sh = "waybar -c ~/.config/waybar/config_niri.json"; }
+        { sh = "waybar"; }
         {
           argv = [
             "wl-paste"

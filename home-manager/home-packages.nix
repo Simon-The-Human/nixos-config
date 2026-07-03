@@ -22,6 +22,7 @@
     # unstable.yandex-browser
     obs-studio
     fuzzel
+    xwayland-satellite
     swaynotificationcenter
     mpv
     mindustry-wayland
