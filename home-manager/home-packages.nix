@@ -115,7 +115,7 @@
     openssh
     unstable.openfortivpn-webview
     packer
-    swww
+    awww
     tree
     unzip
     wget
