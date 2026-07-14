@@ -5,31 +5,34 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    shellAliases = let flakeDir = "~/flake";
-    in {
-      sw = "nh os switch";
-      upd = "nh os switch --update";
-      hms = "nh home switch";
+    shellAliases =
+      let
+        flakeDir = "~/flake";
+      in
+      {
+        sw = "nh os switch";
+        upd = "nh os switch --update";
+        hms = "nh home switch";
 
-      pkgs = "nvim ${flakeDir}/nixos/packages.nix";
+        pkgs = "nvim ${flakeDir}/nixos/packages.nix";
 
-      r = "ranger";
-      v = "nvim";
-      se = "sudoedit";
-      microfetch = "microfetch && echo";
+        r = "ranger";
+        v = "nvim";
+        se = "sudoedit";
+        microfetch = "microfetch && echo";
 
-      gs = "git status";
-      ga = "git add";
-      gc = "git commit";
-      gp = "git push";
+        gs = "git status";
+        ga = "git add";
+        gc = "git commit";
+        gp = "git push";
 
-      ".." = "cd ..";
-    };
+        ".." = "cd ..";
+      };
 
     history.size = 10000;
     history.path = "${config.xdg.dataHome}/zsh/history";
 
-    initExtra = ''
+    initContent = ''
       # Start Tmux automatically if not already running. No Tmux in TTY
       if [ -z "$TMUX" ] && [ -n "$DISPLAY" ]; then
         tmux attach-session -t default || tmux new-session -s default
