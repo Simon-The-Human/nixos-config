@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   programs.steam = {
@@ -6,6 +11,6 @@
     extraCompatPackages = with pkgs; [
       proton-ge-bin
     ];
-    extest.enable = true;
+    extest.enable = false;
   };
 }
