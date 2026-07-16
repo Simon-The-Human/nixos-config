@@ -17,5 +17,6 @@
     # ./wofi
     ./zathura.nix
     ./zsh.nix
+    ./xdg.nix
   ];
 }

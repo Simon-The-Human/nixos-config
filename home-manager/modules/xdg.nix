@@ -25,6 +25,25 @@
     #     StartupWMClass = "Mattermost";
     #   };
     # };
+    portal = {
+      enable = true;
+      config = {
+        # default = {
+        #   "org.freedesktop.impl.portal.FileChooser" = "termfilechooser";
+        # };
+        default = {
+          "org.freedesktop.impl.portal.FileChooser" = "gnome";
+        };
+        # Для композитора niri (необязательно, но пусть будет)
+        niri = {
+          "org.freedesktop.impl.portal.FileChooser" = "gnome";
+        };
+      };
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-gtk
+        xdg-desktop-portal-gnome
+        xdg-desktop-portal-termfilechooser
+      ];
     };
   };
 }

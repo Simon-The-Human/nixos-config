@@ -88,6 +88,15 @@
         { sh = "waybar"; }
         {
           argv = [
+            "dbus-update-activation-environment"
+            "--systemd"
+            "WAYLAND_DISPLAY"
+            "XDG_CURRENT_DESKTOP"
+          ];
+        }
+
+        {
+          argv = [
             "wl-paste"
             "--type"
             "text"
