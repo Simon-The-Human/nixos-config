@@ -28,6 +28,7 @@
     swaynotificationcenter
     mpv
     mindustry-wayland
+    nautilus
     unstable.luanti
     # element-desktop
     zoom-us
@@ -144,7 +145,6 @@
     hyprland
     hyprcursor
     seatd
-    xdg-desktop-portal-hyprland
     polybar
     waybar
     xdg-utils
