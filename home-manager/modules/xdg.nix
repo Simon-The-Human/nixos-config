@@ -33,10 +33,13 @@
         # };
         default = {
           "org.freedesktop.impl.portal.FileChooser" = "gnome";
+          "org.freedesktop.impl.portal.ScreenCast" = "gnome";
+
         };
         # Для композитора niri (необязательно, но пусть будет)
         niri = {
           "org.freedesktop.impl.portal.FileChooser" = "gnome";
+          "org.freedesktop.impl.portal.ScreenCast" = "gnome";
         };
       };
       extraPortals = with pkgs; [

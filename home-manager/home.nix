@@ -8,5 +8,8 @@
     username = user;
     homeDirectory = "/home/${user}";
     stateVersion = homeStateVersion;
+    sessionVariables = {
+      XDG_CURRENT_DESKTOP = "GNOME";
+    };
   };
 }

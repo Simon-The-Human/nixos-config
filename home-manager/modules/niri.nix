@@ -86,15 +86,14 @@
       spawn-at-startup = [
         { sh = "xwayland-satellite"; }
         { sh = "waybar"; }
-        {
-          argv = [
-            "dbus-update-activation-environment"
-            "--systemd"
-            "WAYLAND_DISPLAY"
-            "XDG_CURRENT_DESKTOP"
-          ];
-        }
-
+        # {
+        #   argv = [
+        #     "dbus-update-activation-environment"
+        #     "--systemd"
+        #     "WAYLAND_DISPLAY"
+        #     "XDG_CURRENT_DESKTOP"
+        #   ];
+        # }
         {
           argv = [
             "wl-paste"
