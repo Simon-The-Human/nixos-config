@@ -9,7 +9,6 @@
     '')
     # Desktop apps
     anki
-    # code-cursor
     imv
     mpv
     obs-studio
@@ -20,8 +19,6 @@
     jan
     experimental.telegram-desktop
     mmctl
-    # unstable.steam-run
-    # unstable.yandex-browser
     obs-studio
     fuzzel
     xwayland-satellite
@@ -30,7 +27,6 @@
     mindustry-wayland
     nautilus
     unstable.luanti
-    # element-desktop
     zoom-us
     qbittorrent
     libreoffice
