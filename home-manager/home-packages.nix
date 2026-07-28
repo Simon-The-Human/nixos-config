@@ -1,6 +1,9 @@
 { config, pkgs, ... }: {
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.permittedInsecurePackages = [ "python-2.7.18.8" ];
+  nixpkgs.config.permittedInsecurePackages = [
+    "python-2.7.18.8"
+    "pnpm-10.29.2"
+  ];
 
   home.packages = with pkgs; [
     # Packages in each category are sorted alphabetically
@@ -33,6 +36,7 @@
     unstable.freecad-wayland
     experimental.yandex-disk
     experimental.yandex-music
+    vesktop
 
     # CLI utils
     bc
