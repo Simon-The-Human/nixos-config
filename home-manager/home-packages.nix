@@ -81,7 +81,7 @@
     jupyter
     # jetbrains.pycharm-community-src
     # vscode
-    nodejs
+    uv
     pyenv
     sqlite
     vim
