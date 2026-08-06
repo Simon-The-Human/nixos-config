@@ -75,7 +75,6 @@
     direnv
     experimental.emacs
     experimental.emacsPackages.vterm
-    experimental.emacsPackages.fira-code-mode
     graphviz
     jupyter
     # jetbrains.pycharm-community-src
