@@ -58,16 +58,21 @@
     # GPU stuff
     glaxnimate
   ];
-  fonts.packages = with pkgs; [
-    jetbrains-mono
-    noto-fonts
-    noto-fonts-color-emoji
-    twemoji-color-font
-    font-awesome
-    powerline-fonts
-    powerline-symbols
-    nerd-fonts.symbols-only
-    fira-code
-    fira-code-symbols
-  ];
+  fonts = {
+    packages = with pkgs; [
+      jetbrains-mono
+      noto-fonts
+      noto-fonts-color-emoji
+      twemoji-color-font
+      font-awesome
+      powerline-fonts
+      powerline-symbols
+      nerd-fonts.symbols-only
+      fira-code
+      fira-code-symbols
+    ];
+    fontconfig.defaultFonts = {
+      monospace = [ "Fira Code" ];
+    };
+  };
 }
