@@ -6,7 +6,6 @@
   ];
 
   home.packages = with pkgs; [
-    # Packages in each category are sorted alphabetically
     (writeShellScriptBin "steam" ''
       exec ${pkgs.steam}/bin/steam -cef-disable-gpu "$@"
     '')
