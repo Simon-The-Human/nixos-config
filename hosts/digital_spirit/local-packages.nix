@@ -67,5 +67,7 @@
     powerline-fonts
     powerline-symbols
     nerd-fonts.symbols-only
+    fira-code
+    fira-code-symbols
   ];
 }
