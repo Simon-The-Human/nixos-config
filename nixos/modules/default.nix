@@ -23,6 +23,7 @@
     ./steam.nix
     ./sound.nix
     ./softether.nix
+    ./security.nix
     ./timezone.nix
     ./trim.nix
     ./user.nix
