@@ -83,6 +83,7 @@
     pyenv
     sqlite
     vim
+    mpls
 
     # CLI utils
     unstable.awscli
