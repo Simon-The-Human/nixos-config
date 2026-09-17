@@ -48,7 +48,6 @@
     zapret
     minikube
     gnumake
-    experimental.racket
     # python311
     # python312
     python313
