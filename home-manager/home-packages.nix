@@ -83,7 +83,8 @@
     pyenv
     sqlite
     vim
-    mpls
+    mermaid-cli
+    vmd
 
     # CLI utils
     unstable.awscli
