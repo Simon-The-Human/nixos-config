@@ -7,6 +7,7 @@
     ./direnv.nix
     ./env.nix
     ./gamemode.nix
+    ./happ-module.nix
     ./home-manager.nix
     ./hyprland.nix
     ./java.nix
