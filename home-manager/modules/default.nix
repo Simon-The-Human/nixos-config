@@ -18,5 +18,6 @@
     ./zathura.nix
     ./zsh.nix
     ./xdg.nix
+    ./happ-module.nix
   ];
 }

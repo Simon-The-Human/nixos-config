@@ -1,4 +1,6 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+
+{
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [
     "python-2.7.18.8"
@@ -84,7 +86,7 @@
     sqlite
     vim
     mermaid-cli
-    vmd
+    racket
 
     # CLI utils
     unstable.awscli
