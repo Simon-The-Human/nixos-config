@@ -16,7 +16,6 @@ let
   cfg = config.services.happ;
 in
 {
-  services.happ.enabled = true;
   options.services.happ = {
     enable = mkEnableOption "Happ proxy desktop client and background TUN daemon";
 
