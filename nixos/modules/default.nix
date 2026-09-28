@@ -4,6 +4,7 @@
     ./audio.nix
     ./bluetooth.nix
     ./boot.nix
+    ./cloudflare-warp.nix
     ./direnv.nix
     ./env.nix
     ./gamemode.nix

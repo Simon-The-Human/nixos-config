@@ -2,7 +2,6 @@
   imports = [
     ./alacritty.nix
     ./bat.nix
-    ./cloudflare-warp.nix
     ./eza.nix
     ./git.nix
     # ./hyprland
