@@ -3,65 +3,30 @@
 {
   services.zapret = {
     enable = true;
-    udpSupport = true;
-    params = [
 
+    # Перехватываем P2P UDP-порты
+    udpSupport = true;
+    udpPorts = [
+      "4950,4955"
+      "3960,3962"
     ];
-    blacklist = [
-      "0.0.0.0/8"
-      "10.0.0.0/8"
-      "127.0.0.0/8"
-      "172.16.0.0/12"
-      "192.168.0.0/16"
-      "169.254.0.0/16"
-      "224.0.0.0/4"
-      "100.64.0.0/10"
-      "::1"
-      "fc00::/7"
-      "fe80::/10"
-      "pusher.com"
-      "live-video.net"
-      "ttvnw.net"
-      "twitch.tv"
-      "mail.ru"
-      "citilink.ru"
-      "yandex.com"
-      "nvidia.com"
-      "donationalerts.com"
-      "vk.com"
-      "yandex.kz"
-      "mts.ru"
-      "multimc.org"
-      "ya.ru"
-      "dns-shop.ru"
-      "habr.com"
-      "3dnews.ru"
-      "sberbank.ru"
-      "ozon.ru"
-      "wildberries.ru"
-      "microsoft.com"
-      "microsoftonline.com"
-      "live.com"
-      "minecraft.net"
-      "xboxlive.com"
-      "akamaitechnologies.com"
-      "msi.com"
-      "2ip.ru"
-      "yandex.ru"
-      "boosty.to"
-      "tanki.su"
-      "lesta.ru"
-      "korabli.su"
-      "tanksblitz.ru"
-      "reg.ru"
-      "epicgames.dev"
-      "epicgames.com"
-      "unrealengine.com"
-      "riotgames.com"
-      "riotcdn.net"
-      "leagueoflegends.com"
-      "playvalorant.com"
-      "marketplace.visualstudio.com"
+
+    # Перехватываем HTTP/HTTPS (лаунчер и авторизация)
+    httpSupport = true;
+
+    # Домены, к которым применяется десинхронизация
+    whitelist = [
+      "warframe.com"
+      "digitalextremes.com"
+    ];
+
+    # Аргументы nfqws
+    params = [
+      "--dpi-desync=fake,disorder2"
+      "--dpi-desync-ttl=1"
+      "--dpi-desync-autottl=2"
+      "--dpi-desync-repeats=2"
+      "--dpi-desync-any-protocol=1" # Ключевой флаг: заставляет nfqws обрабатывать кастомный UDP/TCP трафик Warframe
     ];
   };
 }
