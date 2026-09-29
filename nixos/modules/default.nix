@@ -4,7 +4,7 @@
     ./audio.nix
     ./bluetooth.nix
     ./boot.nix
-    ./cloudflare-warp.nix
+    # ./cloudflare-warp.nix
     ./direnv.nix
     ./env.nix
     ./gamemode.nix
@@ -32,6 +32,7 @@
     ./user.nix
     ./virtmanager.nix
     # ./zapret.nix
+    ./xray.nix
     ./zram.nix
   ];
 }
