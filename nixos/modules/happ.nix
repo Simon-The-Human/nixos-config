@@ -1,4 +1,8 @@
-{ pkgs ? import <nixpkgs> { }, forceXwayland ? false, forceSoftwareRendering ? false }:
+{
+  pkgs ? import <nixpkgs> { },
+  forceXwayland ? false,
+  forceSoftwareRendering ? false,
+}:
 
 let
   lib = pkgs.lib;
@@ -14,8 +18,7 @@ let
   # Quick UI incorrectly (or not at all) even under XWayland. This forces
   # software rendering as an independent escape hatch, since it addresses a
   # driver-level rendering issue rather than the Wayland plugin crash.
-  softwareRenderArgs = lib.optionalString forceSoftwareRendering
-    "--set QML_SCENE_GRAPH software --set LIBGL_ALWAYS_SOFTWARE 1";
+  softwareRenderArgs = lib.optionalString forceSoftwareRendering "--set QML_SCENE_GRAPH software --set LIBGL_ALWAYS_SOFTWARE 1";
 
   # External command-line tools that the Happ client and its helper scripts shell
   # out to at runtime. Wrapping them into Happ's PATH makes the client
@@ -36,7 +39,7 @@ let
 in
 pkgs.stdenv.mkDerivation rec {
   pname = "happ-desktop";
-  version = "4.2.1";
+  version = "4.4.8";
 
   src = pkgs.fetchurl {
     url = "https://github.com/Happ-proxy/happ-desktop/releases/download/${version}/Happ.linux.x64.deb";
