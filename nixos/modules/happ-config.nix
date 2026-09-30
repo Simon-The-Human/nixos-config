@@ -2,7 +2,7 @@
 
 {
   services.happ = {
-    enable = true;
+    enable = false;
     forceXwayland = true;
     # forceSoftwareRendering = true;  # если UI поедет
   };
