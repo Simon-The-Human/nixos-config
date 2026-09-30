@@ -281,6 +281,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-xray": {
+      "locked": {
+        "lastModified": 1790689126,
+        "narHash": "sha256-ilerN1WLSvF+HMjziC/Wv99J5y02maDH+6hZPwsORKg=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "b4fd65b198c599cbe814fcb9f42d25d021595ec9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nur": {
       "inputs": {
         "flake-parts": [
@@ -313,6 +329,7 @@
         "nixpkgs": "nixpkgs",
         "nixpkgs-experimental": "nixpkgs-experimental",
         "nixpkgs-unstable": "nixpkgs-unstable",
+        "nixpkgs-xray": "nixpkgs-xray",
         "stylix": "stylix"
       }
     },

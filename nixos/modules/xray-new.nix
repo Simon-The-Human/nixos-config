@@ -21,8 +21,10 @@ in
     enable = true;
     # TUN разводит UDP одного сокета по разным адресам только начиная с
     # Xray 26.6.27. В nixos-26.05 — 26.3.27: там весь UDP сокета уходит на
-    # первый адрес (Warframe не видит серверов DE и игроков). Отсюда unstable.
-    package = pkgs.unstable.xray;
+    # первый адрес (Warframe не видит серверов DE и игроков), и конфиг с TUN
+    # даже не проходит проверку при сборке. Свежий Xray — из отдельного входа
+    # флейка nixpkgs-xray (оверлей xray-new), остальной unstable не трогаем.
+    package = pkgs.xray-new;
 
     settings = {
       log.loglevel = "warning";
