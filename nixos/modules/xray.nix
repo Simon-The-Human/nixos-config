@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  networking.extraCommands = ''
+  networking.firewall.extraCommands = ''
     # --- Настройка TPROXY для Xray ---
     # 1. Правила маршрутизации ядра для fwmark 1
     ip rule add fwmark 1 table 100 2>/dev/null || true
