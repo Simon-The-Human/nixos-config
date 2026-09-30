@@ -38,14 +38,20 @@ in
             mtu = 1500;
             # Всё, что не уходит более точными маршрутами (локалка, офисный
             # OpenVPN, docker, libvirt), — в туннель. IPv6 тоже, иначе утечёт.
-            autoSystemRoutingTable = [ "0.0.0.0/0" "::/0" ];
+            autoSystemRoutingTable = [
+              "0.0.0.0/0"
+              "::/0"
+            ];
             autoOutboundsInterface = "auto";
           };
           # Адрес назначения по имени сайта из TLS/HTTP: сервер сам
           # разрезолвит его, и подменённый провайдером DNS не помешает.
           sniffing = {
             enabled = true;
-            destOverride = [ "http" "tls" ];
+            destOverride = [
+              "http"
+              "tls"
+            ];
           };
         }
         # SOCKS5 для программ, которым нужен явный прокси
@@ -112,7 +118,11 @@ in
       routing.rules = [
         # мультикаст и броадкаст локалки (mDNS, LLMNR, SSDP) в туннеле не нужны
         {
-          ip = [ "224.0.0.0/4" "255.255.255.255/32" "ff00::/8" ];
+          ip = [
+            "224.0.0.0/4"
+            "255.255.255.255/32"
+            "ff00::/8"
+          ];
           outboundTag = "block";
         }
         {
