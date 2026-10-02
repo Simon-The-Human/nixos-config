@@ -52,6 +52,7 @@ in
               "http"
               "tls"
             ];
+            domainsExcluded = [ "domain:warframe.com" ];
           };
         }
         # SOCKS5 для программ, которым нужен явный прокси
