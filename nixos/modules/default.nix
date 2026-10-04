@@ -8,6 +8,7 @@
     ./direnv.nix
     ./env.nix
     ./gamemode.nix
+    ./gitlab-runner.nix
     ./happ-config.nix
     ./happ-module.nix
     ./home-manager.nix
