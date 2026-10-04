@@ -1,3 +1,4 @@
 *.zip
 *.qcow2
 /result
+/nixos/modules/.gitlab-runner-token
