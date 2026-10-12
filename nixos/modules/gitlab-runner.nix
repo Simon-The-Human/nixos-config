@@ -1,19 +1,13 @@
 { pkgs, config, ... }:
 
 {
-  # Включаем Docker, если используем docker executor
-  virtualisation.docker.enable = true;
-
   services.gitlab-runner = {
     enable = true;
     services = {
       # Название секции (произвольное)
       yc-course-runner = {
-        # Указываем URL вашего GitLab
-        gitlabUrl = "http://10.92.14.137";
-
-        # Путь к файлу с токеном регистрации
-        registrationConfigFile = "./gitlab-runner-token";
+        # Путь к файлу с конфигом раннера
+        authenticationTokenConfigFile = "/home/simon/.yc-gitlab-runner";
 
         # Выбираем исполнителя
         executor = "docker";
@@ -22,7 +16,11 @@
         dockerImage = "alpine:latest";
 
         # Разрешаем запускать нетегированные пайплайны (runUntagged = true)
-        tagList = [ "docker" ];
+        dockerVolumes = [
+          "/home/simon:/home/simon:rw"
+          "/var/run/docker.sock:/var/run/docker.sock"
+        ];
+        runUntagged = true;
       };
     };
   };
