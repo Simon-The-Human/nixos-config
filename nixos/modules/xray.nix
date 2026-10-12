@@ -48,14 +48,8 @@ let
     "domain:su"
     "domain:рф"
     "domain:vk.com"
-    "domain:yandex.com"
-    "domain:yandex.net"
     "domain:shiruho.com"
     "domain:senkuro.me"
-    "domain:adsw.io"
-    "domain:arenadata.io"
-    "domain:arenadata.tech"
-    "domain:yandex"
     "domain:yandex.go"
     "domain:pitomniki.shop"
     "domain:filbert.pro"
@@ -64,6 +58,11 @@ let
     "domain:yummyani.me"
     "domain:giga.chat"
     "domain:gazelkin.com"
+    "domain:pornhub.org"
+    "keyword:arenadata"
+    "keyword:adsw"
+    "keyword:yandex"
+    "keyword:sber"
   ]; # мимо VPN: российское на чужих доменах, рабочие сервисы
   myProxy = [ ]; # всегда через VPN, даже если российское
 in
