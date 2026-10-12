@@ -33,7 +33,7 @@
     ./user.nix
     ./virtmanager.nix
     # ./zapret.nix
-    ./xray-new.nix
+    ./xray.nix
     ./zram.nix
   ];
 }
