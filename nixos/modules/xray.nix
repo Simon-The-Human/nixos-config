@@ -29,7 +29,7 @@
 let
   # Файл с ключом. systemd читает его от root и отдаёт службе копию
   # (LoadCredential) — в /nix/store он не попадает.
-  proxyFile = "/etc/xray/proxy.json";
+  proxyFile = "/home/simon/.config/xray/proxy.json";
 in
 {
   services.xray = {
