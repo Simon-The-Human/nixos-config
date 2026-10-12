@@ -30,6 +30,43 @@ let
   # Файл с ключом. systemd читает его от root и отдаёт службе копию
   # (LoadCredential) — в /nix/store он не попадает.
   proxyFile = "/home/simon/.config/xray/proxy.json";
+
+  # Свои правила — правь здесь, потом nixos-rebuild switch. Проверяются
+  # раньше общих, поэтому ими можно переопределить что угодно ниже.
+  #   "domain:arenadata.io"    — домен со всеми поддоменами
+  #   "full:chat.arenadata.io" — только это имя
+  #   "domain:by"              — целая зона
+  #   "keyword:sber"           — в имени есть слово
+  # Без правки российское на чужих доменах (.com, .io …) идёт через VPN —
+  # работает, но с крюком; российские .ru и известные сервисы уже напрямую.
+  # Проверить, куда идёт сайт: узнать его адрес и посмотреть журнал Xray —
+  #   getent ahostsv4 chat.arenadata.io | head -1
+  #   journalctl -u xray -f        # открыть сайт; в строке с его адресом
+  #                                # в конце [… direct] — мимо VPN, [… proxy] — через VPN
+  myDirect = [
+    "domain:arenadata.io"
+    "domain:ru"
+    "domain:su"
+    "domain:рф"
+    "domain:vk.com"
+    "domain:yandex.com"
+    "domain:yandex.net"
+    "domain:shiruho.com"
+    "domain:senkuro.me"
+    "domain:adsw.io"
+    "domain:arenadata.io"
+    "domain:arenadata.tech"
+    "domain:yandex"
+    "domain:yandex.go"
+    "domain:pitomniki.shop"
+    "domain:filbert.pro"
+    "domain:rick-i-morty.net"
+    "domain:shedevrum.ai"
+    "domain:yummyani.me"
+    "domain:giga.chat"
+    "domain:gazelkin.com"
+  ]; # мимо VPN: российское на чужих доменах, рабочие сервисы
+  myProxy = [ ]; # всегда через VPN, даже если российское
 in
 {
   services.xray = {
@@ -122,6 +159,15 @@ in
 
       # Правила сверху вниз, первое совпавшее решает; всё, что не попало
       # ни в одно, — в первый outbound (proxy).
+      #
+      # Подмена адреса именем (sniffing выше) делает цель доменом, и правило
+      # geoip:ru ниже ловит только соединения без имени (звонки по IP).
+      # Российское на чужих доменах (chat.arenadata.io в VK Cloud) поэтому
+      # идёт через VPN — работает, но с крюком; нужное — в myDirect. Можно и
+      # автоматически: routing.domainStrategy = "IPIfNonMatch" плюс
+      # dns.servers = [ "https://1.1.1.1/dns-query" ] (DoH обязателен — DNS
+      # провайдера отдаёт заглушки для заблокированного); проверено в ВМ
+      # 2026-10-12, но выбран список: без своего DNS и предсказуемо.
       routing.rules = [
         # мультикаст и броадкаст локалки (mDNS, LLMNR, SSDP) в туннеле не нужны
         {
@@ -136,6 +182,17 @@ in
           ip = [ "geoip:private" ];
           outboundTag = "direct";
         }
+      ]
+      # Свои списки (пустой пропускается: правило без условий Xray не принимает)
+      ++ lib.optional (myProxy != [ ]) {
+        domain = myProxy;
+        outboundTag = "proxy";
+      }
+      ++ lib.optional (myDirect != [ ]) {
+        domain = myDirect;
+        outboundTag = "direct";
+      }
+      ++ [
         # Warframe целиком через VPN — и к российским игрокам тоже: иначе
         # серверы DE видят адрес VPN, а пакеты игрокам уходят с домашнего IP,
         # и лобби не собирается. Игра шлёт с портов 4950/4955.
