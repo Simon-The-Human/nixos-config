@@ -44,7 +44,6 @@ let
   #   journalctl -u xray -f        # открыть сайт; в строке с его адресом
   #                                # в конце [… direct] — мимо VPN, [… proxy] — через VPN
   myDirect = [
-    "domain:arenadata.io"
     "domain:ru"
     "domain:su"
     "domain:рф"
