@@ -7,7 +7,7 @@
       # Название секции (произвольное)
       yc-course-runner = {
         # Путь к файлу с конфигом раннера
-        authenticationTokenConfigFile = "/home/simon/.yc-gitlab-runner";
+        authenticationTokenConfigFile = "/home/simon/.gitlab-runner/.yc-gitlab-runner";
 
         # Выбираем исполнителя
         executor = "docker";
