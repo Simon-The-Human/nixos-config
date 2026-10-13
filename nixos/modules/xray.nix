@@ -146,6 +146,38 @@ in
           ];
         }
         {
+          tag = "proxy-xhttp-plain";
+          protocol = "vless";
+          settings.vnext = [
+            {
+              address = "127.0.0.1";
+              port = 443;
+              users = [
+                {
+                  id = "00000000-0000-0000-0000-000000000000";
+                  encryption = "none";
+                }
+              ];
+            }
+          ];
+        }
+        {
+          tag = "proxy-tcp";
+          protocol = "vless";
+          settings.vnext = [
+            {
+              address = "127.0.0.1";
+              port = 443;
+              users = [
+                {
+                  id = "00000000-0000-0000-0000-000000000000";
+                  encryption = "none";
+                }
+              ];
+            }
+          ];
+        }
+        {
           tag = "direct";
           protocol = "freedom";
         }
