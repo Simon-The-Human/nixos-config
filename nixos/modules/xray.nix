@@ -58,7 +58,6 @@ let
     "domain:yummyani.me"
     "domain:giga.chat"
     "domain:gazelkin.com"
-    "domain:pornhub.org"
     "keyword:arenadata"
     "keyword:adsw"
     "keyword:yandex"
