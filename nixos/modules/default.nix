@@ -29,6 +29,7 @@
     ./sound.nix
     ./softether.nix
     ./security.nix
+    ./tfc-survival.nix
     ./timezone.nix
     ./trim.nix
     ./user.nix
