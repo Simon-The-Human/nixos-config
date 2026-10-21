@@ -21,7 +21,6 @@
     ./nh.nix
     ./nix.nix
     ./nix-ld.nix
-    ./nm.nix
     ./openssh.nix
     ./openvpn.nix
     # ./resolved.nix
