@@ -20,7 +20,6 @@
     pavucontrol
     alacritty
     audacity
-    jan
     experimental.telegram-desktop
     mmctl
     obs-studio
