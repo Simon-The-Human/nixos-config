@@ -40,8 +40,8 @@
     spice-vdagent
     libtool
     # (jdk17.override {
-    #   enableJavaFX = true;}
-    # )
+    #   enableJavaFX = true;
+    # })
     nixfmt
     openldap
     cyrus_sasl
