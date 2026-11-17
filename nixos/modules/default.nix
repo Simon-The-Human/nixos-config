@@ -27,7 +27,7 @@
     ./steam.nix
     ./sound.nix
     ./softether.nix
-    ./security.nix
+    # ./security.nix
     ./tfc-survival.nix
     ./timezone.nix
     ./trim.nix
