@@ -58,6 +58,8 @@ let
     "domain:yummyani.me"
     "domain:giga.chat"
     "domain:gazelkin.com"
+    "domain:qwen.ai"
+    "domain:hexlet.io"
     "keyword:arenadata"
     "keyword:adsw"
     "keyword:yandex"
