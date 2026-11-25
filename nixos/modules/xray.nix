@@ -75,10 +75,10 @@ in
     # первый адрес (Warframe не видит серверов DE и игроков), и конфиг с TUN
     # даже не проходит проверку при сборке. Свежий Xray — из отдельного входа
     # флейка nixpkgs-xray (оверлей xray-new), остальной unstable не трогаем.
-    package = pkgs.xray-new;
+    package = pkgs.nixpkgs-unstable.xray;
 
     settings = {
-      log.loglevel = "warning";
+      log.loglevel = "info";
 
       inbounds = [
         {

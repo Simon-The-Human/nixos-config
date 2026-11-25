@@ -17,7 +17,6 @@
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixpkgs-xray.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
   outputs =
@@ -27,7 +26,6 @@
       home-manager,
       nixpkgs-unstable,
       nixpkgs-experimental,
-      nixpkgs-xray,
       ...
     }@inputs:
     let
@@ -52,7 +50,6 @@
             inherit system;
             config.allowUnfree = true;
           };
-          xray-new = (import inputs.nixpkgs-xray { inherit system; }).xray;
         })
       ];
 
